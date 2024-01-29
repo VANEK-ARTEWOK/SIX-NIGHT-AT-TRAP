@@ -2,22 +2,48 @@
 
 #include "TXLib.h"
 
+
+ void drawLocation1 (HDC Location1)
+{
+ txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Location1, 0, 0, RGB(512, 68, 68));
+}
+
+void drawEnding1 (HDC Ending1)
+{
+ txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Ending1, 0, 0, RGB(512, 68, 68));
+
+}
+
+void drawMenu (HDC Menu)
+{
+ txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Menu, 0, 0,RGB(512, 68, 68));
+}
+
+
+
 int main()
    {
     txCreateWindow (1540, 800);
 
-    int y = 300;int vy = 20;int x = 400;int vx = 20;
+
     int x1 = 400;int vx1 = 20;int y1 = 400;int vy1 = 20;
-    int x2 = 400;int vx2 = 20;int y2 = 400;int vy2 = 20;
+
     int n_kadr = 0;
 
+    HDC Ending1 =txLoadImage ("КАНЦОВКА1.ЛОГИКА.bmp");
+    HDC Menu =txLoadImage ("меню.bmp");
+    HDC Location1 =txLoadImage ("локация.bmp");
 
-
+    HDC Location = Location1;
     HDC Wiliam1 =txLoadImage ("персонажи/фиолетыч.спрайт.правый.bmp");
     HDC Wiliam2 =txLoadImage ("персонажи/фиолетыч.спрайт.левый.bmp");
     HDC Wiliam = Wiliam1;
     txSetColor (TX_WHITE);
     txSetFillColor (TX_WHITE);
+
+
+
+
   while(true)
     {
      txSetFillColor (TX_BLACK);
@@ -25,23 +51,12 @@ int main()
 
      txBegin();
      txSetFillColor (TX_RED);
-     txCircle(x, y, 50);
-     x = x + vx;
-     y = y + vy;
 
-
-     if(y > 800-50 or y < 50)
-    {
-        vy =- vy;
-    }
-     if(y > 1540-50 or y < 50)
-    {
-     vx =- vx;
-
-    }
      txSetFillColor (TX_ORANGE);
-
+     drawLocation1(Location1);
      txTransparentBlt(txDC(), x1, y1 , 180, 309  ,Wiliam, 180*n_kadr, 0, RGB(237, 28, 36));
+
+
 
      n_kadr +=1;
      if(n_kadr >=4)n_kadr =0;
@@ -70,9 +85,34 @@ int main()
      x1 = x1 + vx1;
     }
 
+     if(vx1>140 and vy1>250)
+    {
+     Location = Menu;
+    }
 
+
+     if(vx1>1060 and vy1>250)
+    {
+     Location=Ending1;
+    }
+
+     if(Location=Menu)
+    {
+     drawMenu(Menu);
+
+    }
+
+
+     if(Location=Ending1)
+    {
+     drawEnding1(Ending1);
+    }
+     if(Location=Location1)
+    {
+     drawLocation1(Location1);
+    }
      txEnd();
-     txSleep(10);
+     txSleep(50);
     }
 
 
@@ -82,4 +122,3 @@ int main()
     txTextCursor (false);
     return 0;
     }
-
