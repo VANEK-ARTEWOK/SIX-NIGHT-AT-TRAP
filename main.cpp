@@ -2,22 +2,55 @@
 
 #include "TXLib.h"
 
+ struct ButtonStart
+ {
+  int x;
+  int y;
+  int w;
+  int h;
+  void draw.start()
+ {
+  txSetColor(TX_RED);
+  txSetFillColor(TX_RED);
+  txRectangle(x,y,x+w, y+h);
+  txDrawText(520,240,830,285,"ÈÃÐÀÒÜ");
+ }
+};
 
- void drawLocation1 (HDC Location1)
-{
- txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Location1, 0, 0, RGB(512, 68, 68));
-}
+struct ButtonHelp
+ {
+  int x;
+  int y;
+  int w;
+  int h;
+  void draw.help()
+ {
+  txSetColor(TX_RED);
+  txSetFillColor(TX_RED);
+  txRectangle(x,y,x+w, y+h);
+  txDrawText(520,360,830,415,"ÏÎÌÎÙÜ")
+ }
+ };
+struct ButtonExit
+ {
+  int x;
+  int y;
+  int w;
+  int h;
+  void draw.exit()
+ {
+  txSetColor(TX_RED);
+  txSetFillColor(TX_RED);
+  txRectangle(x,y,x+w, y+h);
+  txDrawText(520,500,830,570,"ÑÂÀËÈÒÜ")
+ }
+ };
 
-void drawEnding1 (HDC Ending1)
-{
- txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Ending1, 0, 0, RGB(512, 68, 68));
+ //txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Ending1, 0, 0, RGB(512, 68, 68));
 
-}
 
-void drawMenu (HDC Menu)
-{
- txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Menu, 0, 0,RGB(512, 68, 68));
-}
+
+
 
 
 
@@ -26,9 +59,14 @@ int main()
     txCreateWindow (1540, 800);
 
 
+
     int x1 = 400;int vx1 = 20;int y1 = 400;int vy1 = 20;
 
     int n_kadr = 0;
+
+    ButtonStart btn_START = {500,225,850,300,"ÈÃÐÀÒÜ"};
+    Button btn_HELP = {500,340,850,430,"ÏÎÌÎÙÜ"};
+    Button btn_EXIT = {500,485,850,575,"ÑÂÀËÈÒÜ"};
 
     HDC Ending1 =txLoadImage ("ÊÀÍÖÎÂÊÀ1.ËÎÃÈÊÀ.bmp");
     HDC Menu =txLoadImage ("ìåíþ.bmp");
@@ -41,6 +79,7 @@ int main()
     txSetColor (TX_WHITE);
     txSetFillColor (TX_WHITE);
 
+    string PAGE = "menu";
 
 
 
@@ -50,11 +89,47 @@ int main()
      txClear();
 
      txBegin();
-     txSetFillColor (TX_RED);
 
-     txSetFillColor (TX_ORANGE);
-     drawLocation1(Location1);
-     txTransparentBlt(txDC(), x1, y1 , 180, 309  ,Wiliam, 180*n_kadr, 0, RGB(237, 28, 36));
+     if(PAGE == "menu")
+     {
+      btn_START.draw();
+      if(txMouseButtons() == 1 &&
+          txMouseX() > btn.x && txMouseX() < btn.x + btn.w &&
+          txMouseY() > btn.y && txMouseY() < btn.y + btn.h )
+       {
+        PAGE = "game";
+       }
+       if(txMouseButtons() == 1 &&
+          txMouseX() > btn.x && txMouseX() < btn.x + btn.w &&
+          txMouseY() > btn.y && txMouseY() < btn.y + btn.h )
+       {
+        PAGE = "game";
+       }
+        if(txMouseButtons() == 1 &&
+          txMouseX() > btn.x && txMouseX() < btn.x + btn.w &&
+          txMouseY() > btn.y && txMouseY() < btn.y + btn.h )
+       {
+        PAGE = "game";
+       }
+
+
+
+
+
+
+
+     }
+
+
+
+
+     if(PAGE == "game")
+     {
+     txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Location1, 0, 0, RGB(512, 68, 68));
+      txTransparentBlt(txDC(), x1, y1 , 180, 309  ,Wiliam, 180*n_kadr, 0, RGB(237, 28, 36));
+
+
+
 
 
 
@@ -85,32 +160,10 @@ int main()
      x1 = x1 + vx1;
     }
 
-     if(vx1>140 and vy1>250)
-    {
-     Location = Menu;
-    }
-
-
-     if(vx1>1060 and vy1>250)
-    {
-     Location=Ending1;
-    }
-
-     if(Location=Menu)
-    {
-     drawMenu(Menu);
 
     }
 
 
-     if(Location=Ending1)
-    {
-     drawEnding1(Ending1);
-    }
-     if(Location=Location1)
-    {
-     drawLocation1(Location1);
-    }
      txEnd();
      txSleep(50);
     }
