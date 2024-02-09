@@ -303,3 +303,120 @@ Run file:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP
 Directory:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP
 
 --------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13678, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Прямоугольник копируемой области {720, 0, 900, 309} не полностью лежит внутри изображения-источника {0, 0, 721, 309}, функция txTransparentBlt() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F42FC (32-bit), Flags: CMdRe0, Thread: 0x3A88 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004169B9 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: txTransparentBlt() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13678)
+
+# 1 0x0041CE5D in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: main() at E:/Яковлев Иван/ПРОЭКТЫ/ПРОЭКТЫ/пять ночей в ловушке/SIX.NIGHT.AT.TRAP/main.cpp (129):
+
+    127:      {
+    128:      txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Location1, 0, 0, RGB(512, 68, 68));
+=>  129:     txTransparentBlt(txDC(), x, y , 180, 309  ,Wiliam, 180*n_kadr, 0, RGB(237, 28, 36));
+    130: 
+    131: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Feb  5 2024 17:48:50, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Feb 05 2024 17:49:12
+
+Run file:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe
+Directory:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13678, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Прямоугольник копируемой области {720, 0, 900, 309} не полностью лежит внутри изображения-источника {0, 0, 721, 309}, функция txTransparentBlt() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F42FC (32-bit), Flags: CMdRe0, Thread: 0x1600 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004169B9 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: txTransparentBlt() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13678)
+
+# 1 0x0041CE5D in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: main() at E:/Яковлев Иван/ПРОЭКТЫ/ПРОЭКТЫ/пять ночей в ловушке/SIX.NIGHT.AT.TRAP/main.cpp (135):
+
+    133:      {
+    134:      txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Location1, 0, 0, RGB(512, 68, 68));
+=>  135:     txTransparentBlt(txDC(), x, y , 180, 309  ,Wiliam, 180*n_kadr, 0, RGB(237, 28, 36));
+    136: 
+    137: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Feb  5 2024 18:07:50, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Feb 05 2024 18:08:13
+
+Run file:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe
+Directory:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13678, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Прямоугольник копируемой области {720, 0, 900, 309} не полностью лежит внутри изображения-источника {0, 0, 721, 309}, функция txTransparentBlt() работать не будет.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F42FC (32-bit), Flags: CMdRe0, Thread: 0x1600 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004169B9 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: txTransparentBlt() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13678)
+
+# 1 0x0041CE5D in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: main() at E:/Яковлев Иван/ПРОЭКТЫ/ПРОЭКТЫ/пять ночей в ловушке/SIX.NIGHT.AT.TRAP/main.cpp (135):
+
+    133:      {
+    134:      txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Location1, 0, 0, RGB(512, 68, 68));
+=>  135:     txTransparentBlt(txDC(), x, y , 180, 309  ,Wiliam, 180*n_kadr, 0, RGB(237, 28, 36));
+    136: 
+    137: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Feb  5 2024 18:07:50, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Feb 05 2024 18:08:13
+
+Run file:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe
+Directory:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP
+
+--------------------------------------------------

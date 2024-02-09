@@ -1,0 +1,171 @@
+
+
+#include "TXLib.h"
+ /*
+ struct ButtonStart
+ {
+  int x;
+  int y;
+  int w;
+  int h;
+
+  void draw.start
+ {
+  txSetColor(TX_RED);
+  txSetFillColor(TX_RED);
+  txRectangle(x,y,x+w, y+h);
+  txDrawText(520,240,830,285,"ÈÃÐÀÒÜ");
+ }
+};
+
+struct ButtonHelp
+ {
+  int x2;
+  int y2;
+  int w2;
+  int h2;
+  void draw.help()
+ {
+  txSetColor(TX_RED);
+  txSetFillColor(TX_RED);
+  txRectangle(x,y,x+w, y+h);
+  txDrawText(520,360,830,415,"ÏÎÌÎÙÜ")
+ }
+ };
+struct ButtonExit
+ {
+  int x3;
+  int y3;
+  int w3;
+  int h3;
+  void draw.exit()
+ {
+  txSetColor(TX_RED);
+  txSetFillColor(TX_RED);
+  txRectangle(x,y,x+w, y+h);
+  txDrawText(520,500,830,570,"ÑÂÀËÈÒÜ")
+ }
+ };
+
+ //txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Ending1, 0, 0, RGB(512, 68, 68));
+ */
+
+
+
+
+
+
+int main()
+   {
+    txCreateWindow (1540, 800);
+
+
+
+    int x1 = 400;int vx1 = 20;int y1 = 400;int vy1 = 20;
+
+    int n_kadr = 0;
+
+    //ButtonStart btn_start = {500,225,850,300,"ÈÃÐÀÒÜ"};
+    //Button btn_help= {500,340,850,430,"ÏÎÌÎÙÜ"};
+    //Button btn_exit = {500,485,850,575,"ÑÂÀËÈÒÜ"};
+
+    HDC Ending1 =txLoadImage ("ÊÀÍÖÎÂÊÀ1.ËÎÃÈÊÀ.bmp");
+    HDC Menu =txLoadImage ("ìåíþ.bmp");
+    HDC Location1 =txLoadImage ("ëîêàöèÿ.bmp");
+
+    HDC Location = Location1;
+    HDC Wiliam1 =txLoadImage ("ïåðñîíàæè/ôèîëåòû÷.ñïðàéò.ïðàâûé.bmp");
+    HDC Wiliam2 =txLoadImage ("ïåðñîíàæè/ôèîëåòû÷.ñïðàéò.ëåâûé.bmp");
+    HDC Wiliam = Wiliam1;
+    txSetColor (TX_WHITE);
+    txSetFillColor (TX_WHITE);
+
+    string PAGE = "menu";
+
+
+
+  while(true)
+    {
+     txSetFillColor (TX_BLACK);
+     txClear();
+
+     txBegin();
+
+     if(PAGE == "menu")
+     {
+      btn_START.draw();
+      if(txMouseButtons() == 1 &&
+          txMouseX() > btn.start.x && txMouseX() < btn.start.x + btn.start.w &&
+          txMouseY() > btn.start.y && txMouseY() < btn.start.y + btn.start.h )
+       {
+        PAGE = "game";
+       }
+       if(txMouseButtons() == 1 &&
+          txMouseX() > btn.x && txMouseX() < btn.x + btn.w &&
+          txMouseY() > btn.y && txMouseY() < btn.y + btn.h )
+       {
+        PAGE = "game";
+       }
+        if(txMouseButtons() == 1 &&
+          txMouseX() > btn.x && txMouseX() < btn.x + btn.w &&
+          txMouseY() > btn.y && txMouseY() < btn.y + btn.h )
+       {
+        PAGE = "game";
+       }
+     }
+
+
+
+
+     if(PAGE == "game")
+     {
+     txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Location1, 0, 0, RGB(512, 68, 68));
+      txTransparentBlt(txDC(), x1, y1 , 180, 309  ,Wiliam, 180*n_kadr, 0, RGB(237, 28, 36));
+
+
+
+
+
+
+     n_kadr +=1;
+     if(n_kadr >=4)n_kadr =0;
+
+     if(GetAsyncKeyState ('S'))
+    {
+     y1 = y1 + vy1;
+
+    }
+     if(GetAsyncKeyState ('W'))
+    {
+     y1 = y1 - vy1;
+
+    }
+     if(GetAsyncKeyState ('A'))
+    {
+
+     Wiliam = Wiliam1;
+     x1 = x1 - vx1;
+
+    }
+     if(GetAsyncKeyState ('D'))
+    {
+
+     Wiliam=Wiliam2;
+     x1 = x1 + vx1;
+    }
+
+
+    }
+
+
+     txEnd();
+     txSleep(50);
+    }
+
+
+    txDeleteDC(Wiliam1);
+    txDeleteDC(Wiliam2);
+
+    txTextCursor (false);
+    return 0;
+    }
