@@ -4,21 +4,52 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 <body>
 <tt>
-Build started on: <u>03-02-2024 at 14:20.13</u><br />
-Build ended on: <u>03-02-2024 at 14:20.23</u><p />
+Build started on: <u>10-02-2024 at 19:18.04</u><br />
+Build ended on: <u>10-02-2024 at 19:18.07</u><p />
 <b>-------------- Build: Debug in SIX.NIGHT.AT.TRAP (compiler: GNU GCC Compiler)---------------</b><br />
-mingw32-g++.exe -Wall -fexceptions  -g     -c "G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\main.cpp" -o obj\Debug\main.o<br />
-G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\main.cpp: In function 'int main()':<br />
-<font color="#0000ff">G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\main.cpp:72:9: warning: unused variable 'Ending1' [-Wunused-variable]</font><br />
+g++.exe -Wall -fexceptions -g  -c "G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\main.cpp" -o obj\Debug\main.o<br />
+<font color="#ff0000">G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\main.cpp:236:4: error: expected '}' at end of input</font><br />
+    }<br />
+    ^<br />
+<font color="#ff0000">G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\main.cpp:236:4: error: expected unqualified-id at end of input</font><br />
+<font color="#ff0000">G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\main.cpp:236:4: error: expected '}' at end of input</font><br />
+In file included from G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\main.cpp:3:0:<br />
+G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\main.cpp: In member function 'void Door::Car::draw()':<br />
+<font color="#ff0000">G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\main.cpp:32:53: error: expected primary-expression before ',' token</font><br />
+   txTransparentBlt(txDC(),800 ,135  , 522, 171  ,Car, 0, 0, TX_WHITE);<br />
+                                                     ^<br />
+G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\main.cpp: In member function 'void Door::Car::Gay::draw()':<br />
+<font color="#ff0000">G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\main.cpp:46:45: error: 'Wiliam' was not declared in this scope</font><br />
+   txTransparentBlt(txDC(), x, y , 48, 100  ,Wiliam, 180*n_kadr, 0, RGB(237, 28, 36));<br />
+                                             ^<br />
+<font color="#ff0000">G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\main.cpp:46:57: error: 'n_kadr' was not declared in this scope</font><br />
+   txTransparentBlt(txDC(), x, y , 48, 100  ,Wiliam, 180*n_kadr, 0, RGB(237, 28, 36));<br />
+                                                         ^<br />
+G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\main.cpp: In member function 'int Door::Car::main()':<br />
+<font color="#ff0000">G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\main.cpp:181:51: error: 'Help' was not declared in this scope</font><br />
+       txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Help, 0, 0, RGB(512, 68, 68));<br />
+                                                   ^<br />
+<font color="#0000ff">G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\main.cpp:121:9: warning: unused variable 'btn_gay' [-Wunused-variable]</font><br />
+     Gay btn_gay = {643,486,60,100};<br />
+         ^<br />
+<font color="#0000ff">G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\main.cpp:123:16: warning: unused variable 'btn_door' [-Wunused-variable]</font><br />
+     ButtonHelp btn_door = {88,345,100,100,"ВХОД"};<br />
+                ^<br />
+<font color="#0000ff">G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\main.cpp:124:16: warning: unused variable 'btn_car' [-Wunused-variable]</font><br />
+     ButtonExit btn_car = {900,290,366,120,"УХАТЬ"};<br />
+                ^<br />
+<font color="#0000ff">G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\main.cpp:131:9: warning: unused variable 'Ending1' [-Wunused-variable]</font><br />
      HDC Ending1 =txLoadImage ("КАНЦОВКА1.ЛОГИКА.bmp");<br />
          ^<br />
-<font color="#0000ff">G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\main.cpp:76:9: warning: unused variable 'Location' [-Wunused-variable]</font><br />
+<font color="#0000ff">G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\main.cpp:135:9: warning: unused variable 'Location' [-Wunused-variable]</font><br />
      HDC Location = Location1;<br />
          ^<br />
-mingw32-g++.exe  -o bin\Debug\SIX.NIGHT.AT.exe obj\Debug\main.o     -mwindows<br />
-Output size is 2,16 MB<br />
-<font color="#0000ff">Process terminated with status 0 (0 minutes, 10 seconds)</font><br />
-<font color="#0000ff">0 errors, 2 warnings (0 minutes, 10 seconds)</font><br />
+G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\main.cpp: At global scope:<br />
+<font color="#ff0000">G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\main.cpp:236:4: error: expected unqualified-id at end of input</font><br />
+    }<br />
+    ^<br />
+<font color="#a00000">Process terminated with status 1 (0 minute(s), 2 second(s))</font><br />
+<font color="#a00000">8 error(s), 5 warning(s) (0 minute(s), 2 second(s))</font><br />
 </tt>
 </body>
 </html>
