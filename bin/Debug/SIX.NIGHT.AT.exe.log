@@ -1759,3 +1759,857 @@ Run file:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP
 Directory:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP
 
 --------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13678, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Прямоугольник копируемой области {0, 0, 60, 100} не полностью лежит внутри изображения-источника {0, 0, 228, 92}, функция txTransparentBlt() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F42FC (32-bit), Flags: CMdRe0, Thread: 0x1710 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004169B9 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: txTransparentBlt() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13678)
+
+# 1 0x0043C115 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: draw() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x0041D0FF in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: main() at E:/Яковлев Иван/ПРОЭКТЫ/ПРОЭКТЫ/пять ночей в ловушке/SIX.NIGHT.AT.TRAP/main.cpp (156):
+
+    154:             txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Location1, 0, 0, RGB(512, 68, 68));
+    155:             door.draw();
+=>  156:             gay.draw();
+    157:             car.draw();
+    158: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Feb 23 2024 17:51:28, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Feb 23 2024 17:51:50
+
+Run file:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe
+Directory:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13678, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Прямоугольник копируемой области {0, 0, 92, 228} не полностью лежит внутри изображения-источника {0, 0, 228, 92}, функция txTransparentBlt() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F42FC (32-bit), Flags: CMdRe0, Thread: 0x45C (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004169B9 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: txTransparentBlt() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13678)
+
+# 1 0x0043C115 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: draw() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x0041D0FF in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: main() at E:/Яковлев Иван/ПРОЭКТЫ/ПРОЭКТЫ/пять ночей в ловушке/SIX.NIGHT.AT.TRAP/main.cpp (156):
+
+    154:             txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Location1, 0, 0, RGB(512, 68, 68));
+    155:             door.draw();
+=>  156:             gay.draw();
+    157:             car.draw();
+    158: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Feb 23 2024 17:53:11, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Feb 23 2024 17:53:33
+
+Run file:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe
+Directory:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13678, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Прямоугольник копируемой области {57, 0, 149, 228} не полностью лежит внутри изображения-источника {0, 0, 228, 92}, функция txTransparentBlt() работать не будет.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F42FC (32-bit), Flags: CMdRe0, Thread: 0x45C (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004169B9 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: txTransparentBlt() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13678)
+
+# 1 0x0043C115 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: draw() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x0041D0FF in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: main() at E:/Яковлев Иван/ПРОЭКТЫ/ПРОЭКТЫ/пять ночей в ловушке/SIX.NIGHT.AT.TRAP/main.cpp (156):
+
+    154:             txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Location1, 0, 0, RGB(512, 68, 68));
+    155:             door.draw();
+=>  156:             gay.draw();
+    157:             car.draw();
+    158: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Feb 23 2024 17:53:11, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Feb 23 2024 17:53:33
+
+Run file:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe
+Directory:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13678, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Прямоугольник копируемой области {57, 0, 285, 92} не полностью лежит внутри изображения-источника {0, 0, 228, 92}, функция txTransparentBlt() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F42FC (32-bit), Flags: CMdRe0, Thread: 0x2B30 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004169B9 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: txTransparentBlt() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13678)
+
+# 1 0x0043C115 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: draw() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x0041D0FF in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: main() at E:/Яковлев Иван/ПРОЭКТЫ/ПРОЭКТЫ/пять ночей в ловушке/SIX.NIGHT.AT.TRAP/main.cpp (156):
+
+    154:             txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Location1, 0, 0, RGB(512, 68, 68));
+    155:             door.draw();
+=>  156:             gay.draw();
+    157:             car.draw();
+    158: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Feb 23 2024 17:54:52, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Feb 23 2024 17:55:14
+
+Run file:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe
+Directory:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13678, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Прямоугольник копируемой области {114, 0, 342, 92} не полностью лежит внутри изображения-источника {0, 0, 228, 92}, функция txTransparentBlt() работать не будет.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F42FC (32-bit), Flags: CMdRe0, Thread: 0x2B30 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004169B9 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: txTransparentBlt() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13678)
+
+# 1 0x0043C115 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: draw() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x0041D0FF in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: main() at E:/Яковлев Иван/ПРОЭКТЫ/ПРОЭКТЫ/пять ночей в ловушке/SIX.NIGHT.AT.TRAP/main.cpp (156):
+
+    154:             txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Location1, 0, 0, RGB(512, 68, 68));
+    155:             door.draw();
+=>  156:             gay.draw();
+    157:             car.draw();
+    158: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Feb 23 2024 17:54:52, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Feb 23 2024 17:55:14
+
+Run file:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe
+Directory:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13678, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Прямоугольник копируемой области {57, 0, 285, 92} не полностью лежит внутри изображения-источника {0, 0, 228, 92}, функция txTransparentBlt() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F42FC (32-bit), Flags: CMdRe0, Thread: 0x2200 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004169B9 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: txTransparentBlt() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13678)
+
+# 1 0x0043C225 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: draw() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x0041D0FF in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: main() at E:/Яковлев Иван/ПРОЭКТЫ/ПРОЭКТЫ/пять ночей в ловушке/SIX.NIGHT.AT.TRAP/main.cpp (156):
+
+    154:             txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Location1, 0, 0, RGB(512, 68, 68));
+    155:             door.draw();
+=>  156:             gay.draw();
+    157:             car.draw();
+    158: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Feb 23 2024 18:00:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Feb 23 2024 18:00:53
+
+Run file:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe
+Directory:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13678, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Прямоугольник копируемой области {57, 0, 285, 92} не полностью лежит внутри изображения-источника {0, 0, 228, 92}, функция txTransparentBlt() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F42FC (32-bit), Flags: CMdRe0, Thread: 0x17F0 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004169B9 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: txTransparentBlt() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13678)
+
+# 1 0x0043C225 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: draw() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x0041D0FF in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: main() at E:/Яковлев Иван/ПРОЭКТЫ/ПРОЭКТЫ/пять ночей в ловушке/SIX.NIGHT.AT.TRAP/main.cpp (152):
+
+    150:             txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Location1, 0, 0, RGB(512, 68, 68));
+    151:             door.draw();
+=>  152:             gay.draw();
+    153:             car.draw();
+    154: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Feb 23 2024 18:04:49, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Feb 23 2024 18:05:11
+
+Run file:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe
+Directory:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13678, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Прямоугольник копируемой области {114, 0, 342, 92} не полностью лежит внутри изображения-источника {0, 0, 228, 92}, функция txTransparentBlt() работать не будет.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F42FC (32-bit), Flags: CMdRe0, Thread: 0x17F0 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004169B9 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: txTransparentBlt() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13678)
+
+# 1 0x0043C225 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: draw() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x0041D0FF in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: main() at E:/Яковлев Иван/ПРОЭКТЫ/ПРОЭКТЫ/пять ночей в ловушке/SIX.NIGHT.AT.TRAP/main.cpp (152):
+
+    150:             txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Location1, 0, 0, RGB(512, 68, 68));
+    151:             door.draw();
+=>  152:             gay.draw();
+    153:             car.draw();
+    154: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Feb 23 2024 18:04:49, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Feb 23 2024 18:05:11
+
+Run file:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe
+Directory:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13678, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Прямоугольник копируемой области {57, 0, 287, 95} не полностью лежит внутри изображения-источника {0, 0, 230, 95}, функция txTransparentBlt() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F42FC (32-bit), Flags: CMdRe0, Thread: 0x1BE4 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004169B9 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: txTransparentBlt() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13678)
+
+# 1 0x0043C335 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: draw() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x0041D1F2 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: main() at E:/Яковлев Иван/ПРОЭКТЫ/ПРОЭКТЫ/пять ночей в ловушке/SIX.NIGHT.AT.TRAP/main.cpp (155):
+
+    153:             txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Location1, 0, 0, RGB(512, 68, 68));
+    154:             door.draw();
+=>  155:             gay.draw();
+    156:             car.draw();
+    157: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Feb 23 2024 18:14:05, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Feb 23 2024 18:14:25
+
+Run file:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe
+Directory:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13678, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Прямоугольник копируемой области {57, 0, 287, 95} не полностью лежит внутри изображения-источника {0, 0, 230, 95}, функция txTransparentBlt() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F42FC (32-bit), Flags: CMdRe0, Thread: 0x780 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004169B9 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: txTransparentBlt() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13678)
+
+# 1 0x0043C2C5 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: draw() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x0041D1F2 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: main() at E:/Яковлев Иван/ПРОЭКТЫ/ПРОЭКТЫ/пять ночей в ловушке/SIX.NIGHT.AT.TRAP/main.cpp (155):
+
+    153:             txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Location1, 0, 0, RGB(512, 68, 68));
+    154:             door.draw();
+=>  155:             gay.draw();
+    156:             car.draw();
+    157: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Feb 23 2024 18:19:13, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Feb 23 2024 18:19:34
+
+Run file:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe
+Directory:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 10851, функция: bool {anonymous}::TX::_txBuffer_Delete(HDC__**),
+
+Сообщение: Параметр "*dc" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F42FC (32-bit), Flags: CMdRe0, Thread: 0x1564 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Feb 23 2024 18:23:49, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Feb 25 2024 15:20:36
+
+Run file:	G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe
+Directory:	G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe, файл: c:\cb\codeblocks\mingw\include\txlib.h, строка: 13751, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2023-12-23 17:49:41 +0400], Instance: 0x004F62FC (32-bit), Flags: CMdRe0, Thread: 0x1560 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416B1F in G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: txTransparentBlt() at c:/cb/codeblocks/mingw/include/txlib.h (13751)
+
+# 1 0x0041DC8B in G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: main() at G:/Яковлев Иван/ПРОЭКТЫ/ПРОЭКТЫ/пять ночей в ловушке/SIX.NIGHT.AT.TRAP/main.cpp (233):
+
+    231:             if(GetAsyncKeyState ('A'))
+    232:             {
+=>  233:               txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Office_LEFT, 0, 0, RGB(512, 68, 68));
+    234:               if(GetAsyncKeyState ('D'))
+    235:               {
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2023-12-23 17:49:41 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\cb\codeblocks\mingw\include\txlib.h
+Compiled:	Feb 25 2024 15:46:42, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Feb 25 2024 15:46:54
+
+Run file:	G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe
+Directory:	G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe, файл: c:\cb\codeblocks\mingw\include\txlib.h, строка: 13751, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2023-12-23 17:49:41 +0400], Instance: 0x004F62FC (32-bit), Flags: CMdRe0, Thread: 0x700 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416B1F in G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: txTransparentBlt() at c:/cb/codeblocks/mingw/include/txlib.h (13751)
+
+# 1 0x0041DC8B in G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: main() at G:/Яковлев Иван/ПРОЭКТЫ/ПРОЭКТЫ/пять ночей в ловушке/SIX.NIGHT.AT.TRAP/main.cpp (233):
+
+    231:             if(GetAsyncKeyState ('A'))
+    232:             {
+=>  233:               txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Office_LEFT, 0, 0, RGB(512, 68, 68));
+    234:               if(GetAsyncKeyState ('D'))
+    235:               {
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2023-12-23 17:49:41 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\cb\codeblocks\mingw\include\txlib.h
+Compiled:	Feb 25 2024 15:50:04, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Feb 25 2024 15:50:13
+
+Run file:	G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe
+Directory:	G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe, файл: c:\cb\codeblocks\mingw\include\txlib.h, строка: 13751, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2023-12-23 17:49:41 +0400], Instance: 0x004F62FC (32-bit), Flags: CMdRe0, Thread: 0x15C0 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416B1F in G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: txTransparentBlt() at c:/cb/codeblocks/mingw/include/txlib.h (13751)
+
+# 1 0x0041DB4D in G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: main() at G:/Яковлев Иван/ПРОЭКТЫ/ПРОЭКТЫ/пять ночей в ловушке/SIX.NIGHT.AT.TRAP/main.cpp (223):
+
+    221:                if(GetAsyncKeyState ('L'))
+    222:                {
+=>  223:                 txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,MACK, 0, 0, (TX_RED));
+    224:                }
+    225:                if(GetAsyncKeyState ('O'))
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2023-12-23 17:49:41 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\cb\codeblocks\mingw\include\txlib.h
+Compiled:	Feb 25 2024 15:57:00, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Feb 25 2024 15:57:09
+
+Run file:	G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe
+Directory:	G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe, файл: c:\cb\codeblocks\mingw\include\txlib.h, строка: 10937, функция: bool {anonymous}::TX::_txBuffer_Delete(HDC__**),
+
+Сообщение: Параметр "*dc" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2023-12-23 17:49:41 +0400], Instance: 0x004F62FC (32-bit), Flags: CMdRe0, Thread: 0x16C8 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0040A775 in G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: _txBuffer_Delete() at c:/cb/codeblocks/mingw/include/txlib.h (10937)
+# 1 0x00416443 in G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: txDeleteDC() at c:/cb/codeblocks/mingw/include/txlib.h (13691)
+# 2 0x0041658F in G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: txDeleteDC() at c:/cb/codeblocks/mingw/include/txlib.h (13713)
+
+# 3 0x0041E002 in G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: main() at G:/Яковлев Иван/ПРОЭКТЫ/ПРОЭКТЫ/пять ночей в ловушке/SIX.NIGHT.AT.TRAP/main.cpp (263):
+
+    261: 
+    262:     txDeleteDC(gay.image);
+=>  263:     txDeleteDC(gay.image_l);
+    264:     txDeleteDC(gay.image_r);
+    265: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2023-12-23 17:49:41 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\cb\codeblocks\mingw\include\txlib.h
+Compiled:	Feb 25 2024 15:58:07, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Feb 25 2024 15:58:17
+
+Run file:	G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe
+Directory:	G:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13657, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F42FC (32-bit), Flags: CMdRe0, Thread: 0x1694 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416869 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: txTransparentBlt() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13657)
+
+# 1 0x0041D4F4 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: main() at E:/Яковлев Иван/ПРОЭКТЫ/ПРОЭКТЫ/пять ночей в ловушке/SIX.NIGHT.AT.TRAP/main.cpp (205):
+
+    203:         if(PAGE == "game")
+    204:         {
+=>  205:          txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Fon_Location, 0, 0, RGB(512, 68, 68));
+    206: 
+    207:          string door = "open";
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Mar  1 2024 17:33:52, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Mar 04 2024 17:15:43
+
+Run file:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe
+Directory:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13657, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F42FC (32-bit), Flags: CMdRe0, Thread: 0x7BC (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416869 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: txTransparentBlt() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13657)
+
+# 1 0x0041D4F4 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: main() at E:/Яковлев Иван/ПРОЭКТЫ/ПРОЭКТЫ/пять ночей в ловушке/SIX.NIGHT.AT.TRAP/main.cpp (205):
+
+    203:         if(PAGE == "game")
+    204:         {
+=>  205:          txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Fon_Location, 0, 0, RGB(512, 68, 68));
+    206: 
+    207:          string door = "open";
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Mar  4 2024 17:18:39, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Mar 04 2024 17:19:01
+
+Run file:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe
+Directory:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13657, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F42FC (32-bit), Flags: CMdRe0, Thread: 0x2AF4 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416869 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: txTransparentBlt() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13657)
+
+# 1 0x0041D4F4 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: main() at E:/Яковлев Иван/ПРОЭКТЫ/ПРОЭКТЫ/пять ночей в ловушке/SIX.NIGHT.AT.TRAP/main.cpp (205):
+
+    203:         if(PAGE == "game")
+    204:         {
+=>  205:          txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Fon_Location, 0, 0, RGB(512, 68, 68));
+    206: 
+    207:          string door = "open";
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Mar  4 2024 17:20:07, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Mar 04 2024 17:20:28
+
+Run file:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe
+Directory:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13657, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F42FC (32-bit), Flags: CMdRe0, Thread: 0x9DC (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416869 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: txTransparentBlt() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13657)
+
+# 1 0x0041D4F4 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: main() at E:/Яковлев Иван/ПРОЭКТЫ/ПРОЭКТЫ/пять ночей в ловушке/SIX.NIGHT.AT.TRAP/main.cpp (205):
+
+    203:         if(PAGE == "game")
+    204:         {
+=>  205:          txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Fon_Location, 0, 0, RGB(512, 68, 68));
+    206: 
+    207:          string door = "open";
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Mar  4 2024 17:20:07, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Mar 04 2024 17:22:47
+
+Run file:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe
+Directory:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13657, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F42FC (32-bit), Flags: CMdRe0, Thread: 0x2928 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416869 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: txTransparentBlt() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13657)
+
+# 1 0x0041D4F4 in E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe: main() at E:/Яковлев Иван/ПРОЭКТЫ/ПРОЭКТЫ/пять ночей в ловушке/SIX.NIGHT.AT.TRAP/main.cpp (205):
+
+    203:         if(PAGE == "game")
+    204:         {
+=>  205:          txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Fon_Location, 0, 0, RGB(512, 68, 68));
+    206: 
+    207:          string door = "open";
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Mar  4 2024 17:24:29, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Mar 04 2024 17:24:50
+
+Run file:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP\bin\Debug\SIX.NIGHT.AT.exe
+Directory:	E:\Яковлев Иван\ПРОЭКТЫ\ПРОЭКТЫ\пять ночей в ловушке\SIX.NIGHT.AT.TRAP
+
+--------------------------------------------------

@@ -1,107 +1,71 @@
-
-
 #include "TXLib.h"
+
 struct Door
- {
-  int x5;
-  int y5;
-  int w5;
-  int h5;
-  const char*text;
+{
+    int x;
+    int y;
+    int w;
+    int h;
+    HDC image;
 
-  void draw()
- {
-  txSetColor(TX_BLUE) ;
-  txSetFillColor(TX_BLUE);
-  txRectangle(x5,y5,x5+w5, y5+h5);
-  txSetColor(TX_RED);
-  txSetFillColor(TX_RED);
-  txDrawText(520,240,830,285,"ÂÕÎÄ");
- }
- struct Car
- {
-  int x4;
-  int y4;
-  int w4;
-  int h4;
-  const char*text;
+    void draw()
+    {
+     txTransparentBlt(txDC(), x, y , w, h , image, 0, 0, RGB(237, 28, 36));
+    }
+};
 
-  void draw()
- {
-  txTransparentBlt(txDC(),800 ,135  , 522, 171  ,Car, 0, 0, TX_WHITE);
-  txDrawText(800,135,1300,330,"ÅÕÀÒÜ");
- }
+struct Car
+{
+    int x;
+    int y;
+    int w;
+    int h;
+    HDC image;
+
+
+    void draw()
+    {
+        txTransparentBlt(txDC(), x, y, w, h, image, 0, 0, TX_WHITE);
+
+    }
+};
+
 struct Gay
- {
-  int x;
-  int y;
-  int w;
-  int h;
+{
+    int x;
+    int y;
+    int w;
+    int h;
+    int vx;
+    int vy;
+    HDC image_r;
+    HDC image_l;
+    HDC image;
+    int n_kadr;
 
-
-  void draw()
- {
-
-  txTransparentBlt(txDC(), x, y , 48, 100  ,Wiliam, 180*n_kadr, 0, RGB(237, 28, 36));
-
- }
- };
-
- struct ButtonStart
- {
-  int x1;
-  int y1;
-  int w1;
-  int h1;
-  const char*text;
-
-  void draw()
- {
-  txSetColor(RGB(163, 73, 164)) ;
-  txSetFillColor(RGB (163, 73, 164));
-  txRectangle(x1,y1,x1+w1, y1+h1);
-  txSetColor(TX_WHITE);
-  txSetFillColor(TX_WHITE);
-  txDrawText(520,240,830,285,"ÈÃÐÀÒÜ");
- }
+    void draw()
+    {
+        txTransparentBlt(txDC(), x, y , w, h , image, 57*n_kadr, 0, RGB(63, 72, 204));
+    }
 };
 
-struct ButtonHelp
- {
-  int x2;
-  int y2;
-  int w2;
-  int h2;
-  const char*text;
-   void draw()
-  {
-   txSetColor(RGB(163, 73, 164));
-   txSetFillColor(RGB(163, 73, 164));
-   txRectangle(x2,y2,x2+w2, y2+h2);
-   txSetColor(TX_WHITE);
-   txSetFillColor(TX_WHITE);
-   txDrawText(520,360,830,415,"ÏÎÌÎÙÜ");
-  }
- };
-struct ButtonExit
- {
-  int x3;
-  int y3;
-  int w3;
-  int h3;
-  const char*text;
-   void draw()
-  {
-   txSetColor(RGB(163, 73, 164));
-   txSetFillColor(RGB(163, 73, 164));
-   txRectangle(x3,y3,x3+w3, y3+h3);
-   txSetColor(TX_WHITE);
-   txSetFillColor(TX_WHITE);
-   txDrawText(520,500,830,570,"ÑÂÀËÈÒÜ");
-  }
+struct Button
+{
+    int x;
+    int y;
+    int w;
+    int h;
+    const char* text;
+
+    void draw()
+    {
+
+        txSetColor(TX_WHITE);
+        txSetFillColor(TX_WHITE);
+        txDrawText(x,y,x+w, y+h,text);
+    }
 };
 
- //txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Ending1, 0, 0, RGB(512, 68, 68));
 
 
 
@@ -110,31 +74,34 @@ struct ButtonExit
 
 
 int main()
-   {
+{
     txCreateWindow (1540, 800);
 
-    ButtonStart btn_start = {495,215,855-495,300-215,"ÈÃÐÀÒÜ"};
-    ButtonHelp btn_help = {495,345,855-495,432-345,"ÏÎÌÎÙÜ"};
-    ButtonExit btn_exit = {495,485,855-495,580-485,"ÑÂÀËÈÒÜ"};
+    Button btn_start = {495,215,150,50,"ÈÃÐÀÒÜ"};
+    Button btn_help = {495,345,150,50,"ÏÎÌÎÙÜ"};
+    Button btn_exit = {495,485,150,50,"ÑÂÀËÈÒÜ"};
 
-    Gay btn_gay = {643,486,60,100};
+    Gay gay = {643,486,57,95,10,10,txLoadImage("ïåðñîíàæè/ôèîëåòû÷.ñïðàéò.ïðàâûé.bmp"), txLoadImage("ïåðñîíàæè/ôèîëåòû÷.ñïðàéò.ëåâûé.bmp"), txLoadImage("ïåðñîíàæè/ôèîëåòû÷.ñïðàéò.ëåâûé.bmp"),0};
 
-    ButtonHelp btn_door = {88,345,100,100,"ÂÕÎÄ"};
-    ButtonExit btn_car = {900,290,366,120,"ÓÕÀÒÜ"};
-
-    int x = 400;int vx = 20;int y = 400;int vy = 20;
-
-    int n_kadr = 0;
-
+    Door door = {88,200,100,100,txLoadImage ("äâåðü.bmp")};
+    Car car = {900,290,307,102,txLoadImage ("CAR.bmp")};
 
     HDC Ending1 =txLoadImage ("ÊÀÍÖÎÂÊÀ1.ËÎÃÈÊÀ.bmp");
     HDC Menu =txLoadImage ("ìåíþ.bmp");
+
+
+    HDC MACK =txLoadImage ("ÌÀÑÊÀ.bmp");
+    HDC Office =txLoadImage ("ÎÔÈÑbmp.bmp");
+    HDC Office_LEFT =txLoadImage ("ÎÔÈÑ2.bmp");
+    HDC Office_RIGHT =txLoadImage ("ÎÔÈÑ3.bmp");
+    HDC Office_DOOR =txLoadImage ("ÎÔÈÑ2äâåðü.bmp");
+
+
+
     HDC Location1 =txLoadImage ("ëîêàöèÿ.bmp");
-    //HDC Íelp =txLoadImage ("ÏÎÌÎÙÜ.bmp");
+    HDC spr =txLoadImage ("ÏÎÌÎÙÜ.bmp");
     HDC Location = Location1;
-    HDC Wiliam1 =txLoadImage ("ïåðñîíàæè/ôèîëåòû÷.ñïðàéò.ïðàâûé.bmp");
-    HDC Wiliam2 =txLoadImage ("ïåðñîíàæè/ôèîëåòû÷.ñïðàéò.ëåâûé.bmp");
-    HDC Wiliam = Wiliam1;
+
 
     txSetColor (TX_WHITE);
     txSetFillColor (TX_WHITE);
@@ -143,93 +110,160 @@ int main()
 
 
 
-  while(true)
+    while(PAGE != "exit")
     {
-     txSetFillColor (TX_BLACK);
-     txClear();
+        txSetFillColor (TX_BLACK);
+        txClear();
 
-     txBegin();
+        txBegin();
 
-     if(PAGE == "menu")
-     {
-      txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Menu, 0, 0, RGB(512, 68, 68));
-      btn_start.draw();
-      btn_help.draw();
-      btn_exit.draw();
-      if(txMouseButtons() == 1 &&
-          txMouseX() > btn_start.x1 && txMouseX() < btn_start.x1 + btn_start.w1 &&
-          txMouseY() > btn_start.y1 && txMouseY() < btn_start.y1 + btn_start.h1 )
-       {
-        PAGE = "minigame";
-       }
-       if(txMouseButtons() == 1 &&
-          txMouseX() > btn_help.x2 && txMouseX() < btn_help.x2 + btn_help.w2 &&
-          txMouseY() > btn_help.y2 && txMouseY() < btn_help.y2 + btn_help.h2 )
-       {
-        PAGE = "help";
-       }
-        if(txMouseButtons() == 1 &&
-          txMouseX() > btn_exit.x3 && txMouseX() < btn_exit.x3 + btn_exit.w3 &&
-          txMouseY() > btn_exit.y3 && txMouseY() < btn_exit.y3 + btn_exit.h3 )
-       {
-        PAGE = "game";
-       }
-     }
-    if(PAGE == "help")
-     {
-      txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Help, 0, 0, RGB(512, 68, 68));
-     }
+        if(PAGE == "menu")
+        {
+            txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Menu, 0, 0, RGB(512, 68, 68));
+            btn_start.draw();
+            btn_help.draw();
+            btn_exit.draw();
+            if(txMouseButtons() == 1 &&
+              txMouseX() > btn_start.x && txMouseX() < btn_start.x + btn_start.w &&
+              txMouseY() > btn_start.y && txMouseY() < btn_start.y + btn_start.h )
+            {
+                PAGE = "minigame1";
+            }
 
+            if(txMouseButtons() == 1 &&
+              txMouseX() > btn_help.x && txMouseX() < btn_help.x + btn_help.w &&
+              txMouseY() > btn_help.y && txMouseY() < btn_help.y + btn_help.h )
+            {
+                PAGE = "help";
+            }
+            if(txMouseButtons() == 1 &&
+              txMouseX() > btn_exit.x && txMouseX() < btn_exit.x + btn_exit.w &&
+              txMouseY() > btn_exit.y && txMouseY() < btn_exit.y + btn_exit.h )
+            {
+                PAGE = "exit";
+            }
+        }
+        if(PAGE == "help")
+        {
+            txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,spr, 0, 0, RGB(512, 68, 68));
+            if(GetAsyncKeyState (VK_ESCAPE))
+            {
+                PAGE = "menu";
+            }
 
-     if(PAGE == "minigame")
-     {
-     txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Location1, 0, 0, RGB(512, 68, 68));
-
-
-
+        }
 
 
+        if(PAGE == "minigame1")
+        {
+            txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Location1, 0, 0, RGB(512, 68, 68));
+            door.draw();
+            gay.draw();
+            car.draw();
+
+            gay.n_kadr +=1;
+            if(gay.n_kadr >=4) gay.n_kadr =0;
+
+            if(GetAsyncKeyState ('S'))
+            {
+                gay.y = gay.y + gay.vy;
+            }
+            if(GetAsyncKeyState ('W'))
+            {
+                gay.y = gay.y - gay.vy;
+            }
+            if(GetAsyncKeyState ('A'))
+            {
+                gay.image = gay.image_l;
+                gay.x = gay.x - gay.vx;
+            }
+            if(GetAsyncKeyState ('D'))
+            {
+                gay.image = gay.image_r;
+                gay.x = gay.x + gay.vx;
+            }
+            if(gay.x>door.x && gay.x<door.x+door.w &&
+               gay.y>door.y && gay.y<door.y+door.h)
+            {
+                PAGE = "game";
+
+            }
+            if(gay.x>car.x && gay.x<car.x+car.w &&
+               gay.y>car.y && gay.y<car.y+car.h)
+            {
+                PAGE = "end1";
+
+            }
+            if(GetAsyncKeyState (VK_ESCAPE))
+            {
+                PAGE = "menu";
+            }
+
+        }
+        if(PAGE == "game")
+        {
+         txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Office, 0, 0, RGB(512, 68, 68));
+
+         string door = "open";
+
+         if(GetAsyncKeyState (VK_ESCAPE))
+          {
+                PAGE = "menu";
+          }
+
+           if(GetAsyncKeyState ('S'))
+            {
+               txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Office_RIGHT, 0, 0, RGB(512, 68, 68));
+               if(GetAsyncKeyState ('W'))
+               {
+                txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Office, 0, 0, RGB(512, 68, 68));
+               }
+               if(GetAsyncKeyState ('L'))
+               {
+                txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,MACK, 0, 0, (TX_RED));
+               }
+               if(GetAsyncKeyState ('O'))
+               {
+                txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Office, 0, 0,(TX_RED));
+               }
+            }
+
+            if(GetAsyncKeyState ('A'))
+            {
+              txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Office_LEFT, 0, 0, RGB(512, 68, 68));
+              if(GetAsyncKeyState ('D'))
+              {
+                 txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Office, 0, 0, RGB(512, 68, 68));
+              }
+              if(GetAsyncKeyState ('K'))
+              {
+                 txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Office_LEFT, 0, 0, RGB(512, 68, 68));
+                 door= "cloze";
+              }
+              if(GetAsyncKeyState ('J'))
+              {
+                txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Office_LEFT, 0, 0, RGB(512, 68, 68));
+                door = "open";
+              }
 
 
-     n_kadr +=1;
-     if(n_kadr >=4)n_kadr =0;
+            }
 
-     if(GetAsyncKeyState ('S'))
-    {
-     y = y + vy;
-
+        }
+         if(PAGE == "end1")
+        {
+         txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Ending1, 0, 0, RGB(512, 68, 68));
+        }
+        txEnd();
+        txSleep(50);
     }
-     if(GetAsyncKeyState ('W'))
-    {
-     y = y - vy;
-
-    }
-     if(GetAsyncKeyState ('A'))
-    {
-
-     Wiliam = Wiliam1;
-     x = x - vx;
-
-    }
-     if(GetAsyncKeyState ('D'))
-    {
-
-     Wiliam=Wiliam2;
-     x = x + vx;
-    }
 
 
-    }
-
-
-     txEnd();
-     txSleep(50);
-    }
-
-
-    txDeleteDC(Wiliam1);
-    txDeleteDC(Wiliam2);
+    txDeleteDC(gay.image);
+    txDeleteDC(gay.image_l);
+    txDeleteDC(gay.image_r);
 
     txTextCursor (false);
+    txDisableAutoPause();
     return 0;
    }
