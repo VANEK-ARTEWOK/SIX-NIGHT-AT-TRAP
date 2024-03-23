@@ -76,7 +76,7 @@ struct Canister
 
     void draw()
     {
-     txTransparentBlt(txDC(), x, y , w, h , image, 0, 0, ());
+     txTransparentBlt(txDC(), x, y , w, h , image, 0, 0, (TX_WHITE));
 
     }
 };
@@ -90,7 +90,7 @@ struct Axe
 
     void draw()
     {
-     txTransparentBlt(txDC(), x, y , w, h , image, 0, 0, ());
+     txTransparentBlt(txDC(), x, y , w, h , image, 0, 0, (TX_WHITE));
 
 
     }
@@ -104,8 +104,8 @@ int main()
 {
     txCreateWindow (1540, 800);
 
-    Axe axe ={50,281,225,225,txLoadImage("персонажи/фиолетыч.спрайт.правый.bmp")};
-    Canister canister ={410,620,225,267,txLoadImage("персонажи/фиолетыч.спрайт.правый.bmp")};
+    Axe axe ={50,281,225,225,txLoadImage("топор.bmp")};
+    Canister canister ={410,620,225,267,txLoadImage("канистраа.bmp")};
 
 
     Button btn_start = {495,215,150,50,"»√–ј“№"};
@@ -117,7 +117,10 @@ int main()
     Door door = {88,200,100,100,txLoadImage ("дверь.bmp")};
     Car car = {900,290,307,102,txLoadImage ("CAR.bmp")};
 
+    HDC Ending3 =txLoadImage (" јЌ÷ќ¬ ј3.плоха€.bmp");
+    HDC Ending2 =txLoadImage (" јЌ÷ќ¬ ј2.’ќ–ќЎјя.bmp");
     HDC Ending1 =txLoadImage (" јЌ÷ќ¬ ј1.Ћќ√» ј.bmp");
+
     HDC Menu =txLoadImage ("меню.bmp");
 
     HDC Axe =txLoadImage ("топор.bmp");
@@ -136,6 +139,16 @@ int main()
     HDC spr =txLoadImage ("ѕќћќў№.bmp");
     HDC Location = Location1;
 
+    HDC KAM1 =txLoadImage ("камеры/сцена.пусто.bmp");
+    HDC KAM2 =txLoadImage ("камеры/зал.пусто.bmp");
+    HDC KAM3 =txLoadImage ("камеры/бухта1.bmp");
+    HDC KAM4 =txLoadImage ("камеры/запчасти.пусто.bmp");
+    HDC KAM5 =txLoadImage ("камеры/веселье.пусто.bmp");
+    HDC KAM6 =txLoadImage ("камеры/туалет.пусто.bmp");
+    HDC KAM7 =txLoadImage ("камеры/каридор.пусто.bmp");
+    HDC KAM8 =txLoadImage ("камеры/склад.пусто.bmp");
+    HDC KAMvent1 =txLoadImage ("камеры/вентел€цы€.пусто.bmp");
+    HDC KAMvent2 =txLoadImage ("камеры/вентел€цы€2.пусто.bmp");
 
     txSetColor (TX_WHITE);
     txSetFillColor (TX_WHITE);
@@ -251,33 +264,10 @@ int main()
         if(GetAsyncKeyState ('S'))
         {
            Fon_Location = Office_RIGHT;
-           canister.draw();
-           axe.draw();
-           if(txMouseButtons() == 1 &&
-              txMouseX() > axe.x && txMouseX() < axe.x + axe.w &&
-              txMouseY() > axe.y && txMouseY() < axe.y + axe.h )
-            {
-                PAGE = "end2";
-            }
-
-        if(txMouseButtons() == 1 &&
-              txMouseX() > axe.x && txMouseX() < axe.x + axe.w &&
-              txMouseY() > axe.y && txMouseY() < axe.y + axe.h )
-            {
-                PAGE = "end2";
-            }
-
-
-
-
-
         }
 
 
-         if(GetAsyncKeyState ('L'))
-          {
-            Fon_Location = MACK;
-          }
+
           if(GetAsyncKeyState ('O'))
           {
           Fon_Location = Office;
@@ -288,32 +278,629 @@ int main()
             Fon_Location = Office;
         }
 
-            if(GetAsyncKeyState ('K') )
+
+        if(GetAsyncKeyState ('D'))
+         {
+            Fon_Location = Office;
+         }
+
+        if(GetAsyncKeyState ('A') && door == "cloze")
+         {
+            Fon_Location = Office_DOOR;
+
+         }
+        if(GetAsyncKeyState ('A') && door == "open")
+         {
+            Fon_Location = Office_LEFT;
+         }
+
+
+          if(GetAsyncKeyState ('N'))
+           {
+            Fon_Location = KAM1 ;
+           }
+
+
+
+
+
+        if(Fon_Location == Office_LEFT)
+        {
+           if(GetAsyncKeyState ('K') )
             {
                 Fon_Location = Office_DOOR;
                 door == "cloze";
             }
-            else if(GetAsyncKeyState ('J') )
+           if(GetAsyncKeyState ('J') )
             {
                 Fon_Location = Office_LEFT;
                 door == "open";
             }
-            if(GetAsyncKeyState ('D'))
+           if(GetAsyncKeyState ('D'))
             {
                 Fon_Location = Office;
+            }  ;
+        }
+        if(Fon_Location == Office_DOOR)
+        {
+           if(GetAsyncKeyState ('K') )
+            {
+                Fon_Location = Office_DOOR;
+                door == "cloze";
             }
-        if(GetAsyncKeyState ('A') && door == "cloze")
-        {
-            Fon_Location = Office_DOOR;
-
+           if(GetAsyncKeyState ('J') )
+            {
+                Fon_Location = Office_LEFT;
+                door == "open";
+            }
+           if(GetAsyncKeyState ('D'))
+            {
+                Fon_Location = Office;
+            }  ;
         }
-        if(GetAsyncKeyState ('A') && door == "open")
+
+         if(Fon_Location == Office_RIGHT)
         {
-            Fon_Location = Office_LEFT;
-        }
+
+           canister.draw();
+           axe.draw();
+            if(GetAsyncKeyState ('W'))
+           {
+            Fon_Location = Office;
+           }
+            if(GetAsyncKeyState ('L'))
+            {
+             Fon_Location = MACK;
+            }
+
+            if(txMouseButtons() == 1 &&
+              txMouseX() > axe.x && txMouseX() < axe.x + axe.w &&
+              txMouseY() > axe.y && txMouseY() < axe.y + axe.h )
+             {
+                PAGE = "end3";
+             }
+
+           if(txMouseButtons() == 1 &&
+              txMouseX() > canister.x && txMouseX() < canister.x + canister.w &&
+              txMouseY() > canister.y && txMouseY() < canister.y + canister.h )
+             {
+                PAGE = "end2";
+             }
+         }
+
+         if(Fon_Location == KAM1)
+           {
+             if(GetAsyncKeyState ('1'))
+              {
+               Fon_Location = KAM1 ;
+              }
+             if(GetAsyncKeyState ('2'))
+              {
+               Fon_Location = KAM2 ;
+              }
+             if(GetAsyncKeyState ('3'))
+              {
+               Fon_Location = KAM3 ;
+              }
+             if(GetAsyncKeyState ('4'))
+              {
+               Fon_Location = KAM4 ;
+              }
+             if(GetAsyncKeyState ('5'))
+              {
+               Fon_Location = KAM5 ;
+              }
+             if(GetAsyncKeyState ('6'))
+              {
+               Fon_Location = KAM6 ;
+              }
+             if(GetAsyncKeyState ('7'))
+              {
+               Fon_Location = KAM7 ;
+              }
+             if(GetAsyncKeyState ('8'))
+              {
+               Fon_Location = KAM8 ;
+              }
+             if(GetAsyncKeyState ('9'))
+              {
+               Fon_Location = KAMvent1 ;
+              }
+             if(GetAsyncKeyState ('0'))
+              {
+               Fon_Location = KAMvent2 ;
+              }
+             if(GetAsyncKeyState ('B'))
+              {
+               Fon_Location = Office ;
+              }
+
+           }
+          if(Fon_Location == KAM2)
+           {
+             if(GetAsyncKeyState ('1'))
+              {
+               Fon_Location = KAM1 ;
+              }
+             if(GetAsyncKeyState ('2'))
+              {
+               Fon_Location = KAM2 ;
+              }
+             if(GetAsyncKeyState ('3'))
+              {
+               Fon_Location = KAM3 ;
+              }
+             if(GetAsyncKeyState ('4'))
+              {
+               Fon_Location = KAM4 ;
+              }
+             if(GetAsyncKeyState ('5'))
+              {
+               Fon_Location = KAM5 ;
+              }
+             if(GetAsyncKeyState ('6'))
+              {
+               Fon_Location = KAM6 ;
+              }
+             if(GetAsyncKeyState ('7'))
+              {
+               Fon_Location = KAM7 ;
+              }
+             if(GetAsyncKeyState ('8'))
+              {
+               Fon_Location = KAM8 ;
+              }
+             if(GetAsyncKeyState ('9'))
+              {
+               Fon_Location = KAMvent1 ;
+              }
+             if(GetAsyncKeyState ('0'))
+              {
+               Fon_Location = KAMvent2 ;
+              }
+             if(GetAsyncKeyState ('B'))
+              {
+               Fon_Location = Office ;
+              }
+
+           }
 
 
+         if(Fon_Location == KAM3)
+           {
+             if(GetAsyncKeyState ('1'))
+              {
+               Fon_Location = KAM1 ;
+              }
+             if(GetAsyncKeyState ('2'))
+              {
+               Fon_Location = KAM2 ;
+              }
+             if(GetAsyncKeyState ('3'))
+              {
+               Fon_Location = KAM3 ;
+              }
+             if(GetAsyncKeyState ('4'))
+              {
+               Fon_Location = KAM4 ;
+              }
+             if(GetAsyncKeyState ('5'))
+              {
+               Fon_Location = KAM5 ;
+              }
+             if(GetAsyncKeyState ('6'))
+              {
+               Fon_Location = KAM6 ;
+              }
+             if(GetAsyncKeyState ('7'))
+              {
+               Fon_Location = KAM7 ;
+              }
+             if(GetAsyncKeyState ('8'))
+              {
+               Fon_Location = KAM8 ;
+              }
+             if(GetAsyncKeyState ('9'))
+              {
+               Fon_Location = KAMvent1 ;
+              }
+             if(GetAsyncKeyState ('0'))
+              {
+               Fon_Location = KAMvent2 ;
+              }
+             if(GetAsyncKeyState ('B'))
+              {
+               Fon_Location = Office ;
+              }
 
+           }
+          if(Fon_Location == KAM2)
+           {
+             if(GetAsyncKeyState ('1'))
+              {
+               Fon_Location = KAM1 ;
+              }
+             if(GetAsyncKeyState ('2'))
+              {
+               Fon_Location = KAM2 ;
+              }
+             if(GetAsyncKeyState ('3'))
+              {
+               Fon_Location = KAM3 ;
+              }
+             if(GetAsyncKeyState ('4'))
+              {
+               Fon_Location = KAM4 ;
+              }
+             if(GetAsyncKeyState ('5'))
+              {
+               Fon_Location = KAM5 ;
+              }
+             if(GetAsyncKeyState ('6'))
+              {
+               Fon_Location = KAM6 ;
+              }
+             if(GetAsyncKeyState ('7'))
+              {
+               Fon_Location = KAM7 ;
+              }
+             if(GetAsyncKeyState ('8'))
+              {
+               Fon_Location = KAM8 ;
+              }
+             if(GetAsyncKeyState ('9'))
+              {
+               Fon_Location = KAMvent1 ;
+              }
+             if(GetAsyncKeyState ('0'))
+              {
+               Fon_Location = KAMvent2 ;
+              }
+             if(GetAsyncKeyState ('B'))
+              {
+               Fon_Location = Office ;
+              }
+
+           }
+
+         if(Fon_Location == KAM4)
+           {
+             if(GetAsyncKeyState ('1'))
+              {
+               Fon_Location = KAM1 ;
+              }
+             if(GetAsyncKeyState ('2'))
+              {
+               Fon_Location = KAM2 ;
+              }
+             if(GetAsyncKeyState ('3'))
+              {
+               Fon_Location = KAM3 ;
+              }
+             if(GetAsyncKeyState ('4'))
+              {
+               Fon_Location = KAM4 ;
+              }
+             if(GetAsyncKeyState ('5'))
+              {
+               Fon_Location = KAM5 ;
+              }
+             if(GetAsyncKeyState ('6'))
+              {
+               Fon_Location = KAM6 ;
+              }
+             if(GetAsyncKeyState ('7'))
+              {
+               Fon_Location = KAM7 ;
+              }
+             if(GetAsyncKeyState ('8'))
+              {
+               Fon_Location = KAM8 ;
+              }
+             if(GetAsyncKeyState ('9'))
+              {
+               Fon_Location = KAMvent1 ;
+              }
+             if(GetAsyncKeyState ('0'))
+              {
+               Fon_Location = KAMvent2 ;
+              }
+             if(GetAsyncKeyState ('B'))
+              {
+               Fon_Location = Office ;
+              }
+
+           }
+          if(Fon_Location == KAM5)
+           {
+             if(GetAsyncKeyState ('1'))
+              {
+               Fon_Location = KAM1 ;
+              }
+             if(GetAsyncKeyState ('2'))
+              {
+               Fon_Location = KAM2 ;
+              }
+             if(GetAsyncKeyState ('3'))
+              {
+               Fon_Location = KAM3 ;
+              }
+             if(GetAsyncKeyState ('4'))
+              {
+               Fon_Location = KAM4 ;
+              }
+             if(GetAsyncKeyState ('5'))
+              {
+               Fon_Location = KAM5 ;
+              }
+             if(GetAsyncKeyState ('6'))
+              {
+               Fon_Location = KAM6 ;
+              }
+             if(GetAsyncKeyState ('7'))
+              {
+               Fon_Location = KAM7 ;
+              }
+             if(GetAsyncKeyState ('8'))
+              {
+               Fon_Location = KAM8 ;
+              }
+             if(GetAsyncKeyState ('9'))
+              {
+               Fon_Location = KAMvent1 ;
+              }
+             if(GetAsyncKeyState ('0'))
+              {
+               Fon_Location = KAMvent2 ;
+              }
+             if(GetAsyncKeyState ('B'))
+              {
+               Fon_Location = Office ;
+              }
+
+           }
+
+         if(Fon_Location == KAM6)
+           {
+             if(GetAsyncKeyState ('1'))
+              {
+               Fon_Location = KAM1 ;
+              }
+             if(GetAsyncKeyState ('2'))
+              {
+               Fon_Location = KAM2 ;
+              }
+             if(GetAsyncKeyState ('3'))
+              {
+               Fon_Location = KAM3 ;
+              }
+             if(GetAsyncKeyState ('4'))
+              {
+               Fon_Location = KAM4 ;
+              }
+             if(GetAsyncKeyState ('5'))
+              {
+               Fon_Location = KAM5 ;
+              }
+             if(GetAsyncKeyState ('6'))
+              {
+               Fon_Location = KAM6 ;
+              }
+             if(GetAsyncKeyState ('7'))
+              {
+               Fon_Location = KAM7 ;
+              }
+             if(GetAsyncKeyState ('8'))
+              {
+               Fon_Location = KAM8 ;
+              }
+             if(GetAsyncKeyState ('9'))
+              {
+               Fon_Location = KAMvent1 ;
+              }
+             if(GetAsyncKeyState ('0'))
+              {
+               Fon_Location = KAMvent2 ;
+              }
+             if(GetAsyncKeyState ('B'))
+              {
+               Fon_Location = Office ;
+              }
+
+           }
+          if(Fon_Location == KAM7)
+           {
+             if(GetAsyncKeyState ('1'))
+              {
+               Fon_Location = KAM1 ;
+              }
+             if(GetAsyncKeyState ('2'))
+              {
+               Fon_Location = KAM2 ;
+              }
+             if(GetAsyncKeyState ('3'))
+              {
+               Fon_Location = KAM3 ;
+              }
+             if(GetAsyncKeyState ('4'))
+              {
+               Fon_Location = KAM4 ;
+              }
+             if(GetAsyncKeyState ('5'))
+              {
+               Fon_Location = KAM5 ;
+              }
+             if(GetAsyncKeyState ('6'))
+              {
+               Fon_Location = KAM6 ;
+              }
+             if(GetAsyncKeyState ('7'))
+              {
+               Fon_Location = KAM7 ;
+              }
+             if(GetAsyncKeyState ('8'))
+              {
+               Fon_Location = KAM8 ;
+              }
+             if(GetAsyncKeyState ('9'))
+              {
+               Fon_Location = KAMvent1 ;
+              }
+             if(GetAsyncKeyState ('0'))
+              {
+               Fon_Location = KAMvent2 ;
+              }
+             if(GetAsyncKeyState ('B'))
+              {
+               Fon_Location = Office ;
+              }
+
+           }
+          if(Fon_Location == KAM8)
+           {
+             if(GetAsyncKeyState ('1'))
+              {
+               Fon_Location = KAM1 ;
+              }
+             if(GetAsyncKeyState ('2'))
+              {
+               Fon_Location = KAM2 ;
+              }
+             if(GetAsyncKeyState ('3'))
+              {
+               Fon_Location = KAM3 ;
+              }
+             if(GetAsyncKeyState ('4'))
+              {
+               Fon_Location = KAM4 ;
+              }
+             if(GetAsyncKeyState ('5'))
+              {
+               Fon_Location = KAM5 ;
+              }
+             if(GetAsyncKeyState ('6'))
+              {
+               Fon_Location = KAM6 ;
+              }
+             if(GetAsyncKeyState ('7'))
+              {
+               Fon_Location = KAM7 ;
+              }
+             if(GetAsyncKeyState ('8'))
+              {
+               Fon_Location = KAM8 ;
+              }
+             if(GetAsyncKeyState ('9'))
+              {
+               Fon_Location = KAMvent1 ;
+              }
+             if(GetAsyncKeyState ('0'))
+              {
+               Fon_Location = KAMvent2 ;
+              }
+             if(GetAsyncKeyState ('B'))
+              {
+               Fon_Location = Office ;
+              }
+
+           }
+
+         if(Fon_Location == KAMvent1)
+           {
+             if(GetAsyncKeyState ('1'))
+              {
+               Fon_Location = KAM1 ;
+              }
+             if(GetAsyncKeyState ('2'))
+              {
+               Fon_Location = KAM2 ;
+              }
+             if(GetAsyncKeyState ('3'))
+              {
+               Fon_Location = KAM3 ;
+              }
+             if(GetAsyncKeyState ('4'))
+              {
+               Fon_Location = KAM4 ;
+              }
+             if(GetAsyncKeyState ('5'))
+              {
+               Fon_Location = KAM5 ;
+              }
+             if(GetAsyncKeyState ('6'))
+              {
+               Fon_Location = KAM6 ;
+              }
+             if(GetAsyncKeyState ('7'))
+              {
+               Fon_Location = KAM7 ;
+              }
+             if(GetAsyncKeyState ('8'))
+              {
+               Fon_Location = KAM8 ;
+              }
+             if(GetAsyncKeyState ('9'))
+              {
+               Fon_Location = KAMvent1 ;
+              }
+             if(GetAsyncKeyState ('0'))
+              {
+               Fon_Location = KAMvent2 ;
+              }
+             if(GetAsyncKeyState ('B'))
+              {
+               Fon_Location = Office ;
+              }
+
+           }
+          if(Fon_Location == KAMvent2)
+           {
+             if(GetAsyncKeyState ('1'))
+              {
+               Fon_Location = KAM1 ;
+              }
+             if(GetAsyncKeyState ('2'))
+              {
+               Fon_Location = KAM2 ;
+              }
+             if(GetAsyncKeyState ('3'))
+              {
+               Fon_Location = KAM3 ;
+              }
+             if(GetAsyncKeyState ('4'))
+              {
+               Fon_Location = KAM4 ;
+              }
+             if(GetAsyncKeyState ('5'))
+              {
+               Fon_Location = KAM5 ;
+              }
+             if(GetAsyncKeyState ('6'))
+              {
+               Fon_Location = KAM6 ;
+              }
+             if(GetAsyncKeyState ('7'))
+              {
+               Fon_Location = KAM7 ;
+              }
+             if(GetAsyncKeyState ('8'))
+              {
+               Fon_Location = KAM8 ;
+              }
+             if(GetAsyncKeyState ('9'))
+              {
+               Fon_Location = KAMvent1 ;
+              }
+             if(GetAsyncKeyState ('0'))
+              {
+               Fon_Location = KAMvent2 ;
+              }
+             if(GetAsyncKeyState ('B'))
+              {
+               Fon_Location = Office ;
+              }
+
+           }
 
 
 
@@ -328,8 +915,22 @@ int main()
                 PAGE = "menu";
          }
      }
-
-
+     if(PAGE == "end2")
+     {
+         txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Ending2, 0, 0, RGB(512, 68, 68));
+         if(GetAsyncKeyState (VK_ESCAPE))
+         {
+                PAGE = "menu";
+         }
+     }
+     if(PAGE == "end3")
+     {
+         txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Ending3, 0, 0, RGB(512, 68, 68));
+         if(GetAsyncKeyState (VK_ESCAPE))
+         {
+                PAGE = "menu";
+         }
+     }
         txEnd();
         txSleep(50);
     }
