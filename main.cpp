@@ -126,11 +126,11 @@ int main()
     HDC Axe =txLoadImage ("топор.bmp");
     HDC Canister =txLoadImage ("канистраа.bmp");
 
-    HDC MACK =txLoadImage ("МАСКА .bmp");
-    HDC Office =txLoadImage ("ОФИСbmp.bmp");
-    HDC Office_LEFT =txLoadImage ("ОФИС2bmp.bmp");
-    HDC Office_RIGHT =txLoadImage ("ОФИС3.bmp");
-    HDC Office_DOOR =txLoadImage ("ОФИС2дверь.bmp");
+    HDC MACK =txLoadImage ("офис/МАСКА .bmp");
+    HDC Office =txLoadImage ("офис/ОФИСbmp.bmp");
+    HDC Office_LEFT =txLoadImage ("офис/ОФИС2bmp.bmp");
+    HDC Office_RIGHT =txLoadImage ("офис/ОФИС3.bmp");
+    HDC Office_DOOR =txLoadImage ("офис/ОФИС2дверь.bmp");
     HDC Fon_Location = Office;
 
 
@@ -155,6 +155,7 @@ int main()
 
     string PAGE = "menu";
 
+    bool door_open = true;
 
 
     while(PAGE != "exit")
@@ -254,7 +255,6 @@ int main()
 
          txTransparentBlt(txDC(),0 ,0  , 1540, 800  ,Fon_Location, 0, 0, RGB(237, 0, 0));
 
-         string door = "open";
 
          if(GetAsyncKeyState (VK_ESCAPE))
           {
@@ -284,12 +284,12 @@ int main()
             Fon_Location = Office;
          }
 
-        if(GetAsyncKeyState ('A') && door == "cloze")
+        if(GetAsyncKeyState ('A') && !door_open)
          {
             Fon_Location = Office_DOOR;
 
          }
-        if(GetAsyncKeyState ('A') && door == "open")
+        if(GetAsyncKeyState ('A') && door_open)
          {
             Fon_Location = Office_LEFT;
          }
@@ -309,12 +309,12 @@ int main()
            if(GetAsyncKeyState ('K') )
             {
                 Fon_Location = Office_DOOR;
-                door == "cloze";
+                door_open = false;
             }
            if(GetAsyncKeyState ('J') )
             {
                 Fon_Location = Office_LEFT;
-                door == "open";
+                door_open = true;
             }
            if(GetAsyncKeyState ('D'))
             {
@@ -326,12 +326,12 @@ int main()
            if(GetAsyncKeyState ('K') )
             {
                 Fon_Location = Office_DOOR;
-                door == "cloze";
+                door_open = false;
             }
            if(GetAsyncKeyState ('J') )
             {
                 Fon_Location = Office_LEFT;
-                door == "open";
+                door_open = true;
             }
            if(GetAsyncKeyState ('D'))
             {
