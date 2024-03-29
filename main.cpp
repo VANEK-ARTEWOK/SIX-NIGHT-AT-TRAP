@@ -96,7 +96,22 @@ struct Axe
     }
 };
 
+struct Laugh
+{
+    int x;
+    int y;
+    int w;
+    int h;
+    const char* text;
 
+    void draw()
+    {
+        txSetColor(TX_GRAY);
+        txSetFillColor(TX_GRAY);
+        txDrawText(x,y,x+w,y+h,text);
+
+    }
+};
 
 
 
@@ -125,7 +140,7 @@ int main()
 
     HDC Axe =txLoadImage ("топор.bmp");
     HDC Canister =txLoadImage ("канистраа.bmp");
-
+    Laugh laugh = {1170,550,1455,650,"ВЕРНУТЬ НАЗАД"};
     HDC MACK =txLoadImage ("офис/МАСКА .bmp");
     HDC Office =txLoadImage ("офис/ОФИСbmp.bmp");
     HDC Office_LEFT =txLoadImage ("офис/ОФИС2bmp.bmp");
@@ -807,6 +822,7 @@ int main()
 
          if(Fon_Location == KAMvent1)
            {
+             laugh.draw();
              if(GetAsyncKeyState ('1'))
               {
                Fon_Location = KAM1 ;
@@ -855,6 +871,7 @@ int main()
            }
           if(Fon_Location == KAMvent2)
            {
+             laugh.draw();
              if(GetAsyncKeyState ('1'))
               {
                Fon_Location = KAM1 ;
